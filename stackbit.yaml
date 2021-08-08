@@ -1,0 +1,40 @@
+stackbitVersion: ~0.3.0
+dataDir: ios/App/Images.xcassets/AppIcon.appiconset
+pagesDir: src/app/components/pages/page-types
+models:
+  page_type:
+    type: page
+    label: Page Type
+    match: '*'
+    fields: []
+  contents:
+    type: data
+    label: Contents
+    file: Contents.json
+    fields:
+      - type: list
+        name: images
+        label: Images
+        items:
+          type: object
+          fields:
+            - type: string
+              name: idiom
+              label: Idiom
+            - type: string
+              name: size
+              label: Size
+            - type: string
+              name: scale
+              label: Scale
+      - type: object
+        name: info
+        label: Info
+        fields:
+          - type: number
+            name: version
+            label: Version
+            subtype: int
+          - type: string
+            name: author
+            label: Author
